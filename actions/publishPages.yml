@@ -1,0 +1,19 @@
+name: Publish to Pages
+
+on:
+  # TODO
+
+jobs:
+  publish_pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      # Your build things here
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v1.1.0
+        env:
+          PUBLISH_DIR: _site # the directory to publish from
+          PUBLISH_BRANCH: gh-pages # the branch to push to
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

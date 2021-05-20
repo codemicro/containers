@@ -12,3 +12,11 @@
 | ----------------- | ------------------------------------------------------------ | -------------------------------- |
 | `appWithDatabase` | Compose file for an application container alongside a MySQL database. | [Link](/compose/appWithDatabase) |
 
+# actions
+
+| Name           | Description                                                  | Link                              |
+| -------------- | ------------------------------------------------------------ | --------------------------------- |
+| `publishPages` | Publish a GitHub pages site                                  | [Link][/actions/publishPages.yml] |
+| `mage`         | Run a Magefile in Actions                                    | [Link](/actions/mage.yml)         |
+| `tagVersion`   | Get the version specified by a tag if the workflow is run from a GitHub release | [Link](/actions/tagVersion.yml)   |
+

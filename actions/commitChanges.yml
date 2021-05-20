@@ -1,0 +1,24 @@
+name: Commit changes
+
+on:
+  # TODO
+
+jobs:
+  commit_changes:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out repository
+          uses: actions/checkout@v2
+          with:
+            ref: ${{ github.ref }}
+            fetch-depth: 0
+
+        # Do things here
+
+        - name: Git commit and push
+          run: |
+            git config user.email 'actions@github.com'
+            git config user.name 'github-actions'
+            git add blah blah
+            git commit -m 'Message goes here'
+            git push origin HEAD:${{ github.ref }}
