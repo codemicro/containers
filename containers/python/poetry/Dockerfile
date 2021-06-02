@@ -1,0 +1,16 @@
+FROM python:3.8-alpine
+
+ENV PIP_DISABLE_PIP_VERSION_CHECK=on
+
+RUN pip install poetry
+
+WORKDIR /usr/src/app
+
+COPY poetry.lock pyproject.toml ./
+
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-interaction
+
+COPY ./myapp ./
+
+CMD ["poetry", "run", "python", "./myapp"]
