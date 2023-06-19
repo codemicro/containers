@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3-alpine
 
 ENV PIP_DISABLE_PIP_VERSION_CHECK=on
 
